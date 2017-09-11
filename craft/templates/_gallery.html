@@ -1,0 +1,96 @@
+<div class="background-imgs">
+	<img class="lightbulb" src="/resources/images/lightbulb.png">
+	<img class="gallery-blob" src="/resources/images/gallery_blob_1.png">
+	<img class="gallery_grid_1" src="/resources/images/gallery_grid_1.png">
+	<img class="buffalo" src="/resources/images/buffalo.png">
+	<img class="pink-disk" src="/resources/images/pink-disk.png">
+	<img class="yellow-bars" src="/resources/images/yellow_bars.png">
+	<img class="lac" src="/resources/images/lower_accent_circles.png">
+	<img class="turnip" src="/resources/images/turnip.png">
+
+	
+</div>
+
+{% block content %}
+	{% for entry in craft.entries.section('gallery') %}
+		<section class="gallery-item-container">
+		  <div class="gallery-item-block">
+				{% for block in entry.galleryItem %}
+				{% if block.type == "projectInfo" %}
+				<h3 class="main-title">
+					{{ block.clientName }}
+				</h3>
+				<div class="gallery-hover">
+					<div class="more-info-block more-info-fade-out-words">
+						<div class="blurb anonymous-f">
+							{{ block.projectBlurb}}
+						</div>
+						<div class="agency-info">
+							<p class="century-f-bold">Agency ¬ </p>
+							<p class="century-f">{{ block.agencyName }}</p>
+						</div>
+						<div class="dev-info">
+							<p class="century-f-bold">Dev Stack ¬ </p>
+							<p class="century-f">{{ block.devStack}}</p>
+						</div>
+						
+						
+					</div>
+
+					<div class="gallery-slider more-info-fade-in">
+
+					
+
+
+						{% set assets = entry.galleryImage %}
+
+						{% if assets | length %}
+
+						    {% for asset in assets %}
+
+						    {% if asset.kind == 'video' %}
+						   <!--  <video class="vid" preload="none" controls="false" loop webkit-playsinline muted>
+						    	  <source src="{{ asset.url }}" poster="{{ asset.url }}" type="video/mp4">
+
+						    	</video> -->
+
+						    
+						    {% else %}
+						    	
+						    <img class="gallery_img_1"  src="{{ asset.url }}">
+
+						    {% endif %}
+
+						   
+
+
+						      
+                         
+						    {% endfor %}
+
+						{% endif %}
+						   </div>
+								<div class="project-info float-l">
+						        
+							        <h3 class="uppercase century-f-bold">{{ block.projectTitle }}</h3>
+							        <h3 class="light-grey anonymous-f"> {{ block.myRole }} </h3>
+						        </div>
+						        <div class="more-info float-r">
+						        	<p class="more-info-button anonymous-f light-grey"> More Info ¬ </p>
+						        	<p class="anonymous-f light-grey">
+						        		{% if block.websiteLink is empty %}
+						        		 <strike>Visit site ¬</strike> No Longer Live 
+						        		{% else %}
+						        		<a href="{{ block.websiteLink }}" target="_blank"> Visit Site ¬ </a></p>
+						        		{% endif %}
+
+						        	
+						        </div>
+						    {% endif %}
+						{% endfor %}
+					</div>
+			</div>
+		</section>
+	{% endfor %}
+{% endblock %}
+

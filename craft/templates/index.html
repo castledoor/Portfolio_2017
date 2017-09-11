@@ -1,0 +1,89 @@
+{% extends "_layout" %}
+
+{% block content %}
+	{% for entry in craft.entries.section('homepage') %}
+
+		<section class="intro-block">
+			<div class="name-plate">
+				<div class="intro-text">
+					<p class="name"> JAZZY </p>
+					<div class="occupation">
+						<p>digital creative</p>
+						<p>front-end developer</p>
+					</div>
+				</div>
+			</div>
+			<div class="leaf">
+				<img src="/resources/images/leaf.png">
+			</div>
+			<div class="personality-image">
+				<img src="/resources/images/personality_image.png">
+			</div>
+	        <div class="quote-container">
+				<div class="quote">
+					<img class="qleft" src="/resources/images/quote_left.png">
+					<p class="tag">{{ entry.tagLine }}</p>
+					<img class="qright" src="/resources/images/quote_right.png">
+				</div>
+			</div>
+		</section>
+	<!-- 	<div class="nav">
+			<div class="arrows">
+				<img class="nav_arrow" src="/resources/images/nav_arrow.png">
+				<img class="nav_arrow" src="/resources/images/nav_arrow.png">
+				<img class="nav_arrow" src="/resources/images/nav_arrow.png">
+				<img class="nav_arrow" src="/resources/images/nav_arrow.png">
+			</div>
+			<div class="nav-words">
+				<p>ABOUT</p></br>
+				<p>PORTFOLIO</p></br>
+				<p>CONTACT</p></br>
+				<p>RESUME</p>
+			</div>
+		</div> -->
+		<!-- <div class="mobile-nav">
+			<img class="hamburger" src="/resources/images/hamburger.png">
+		</div> -->
+		<section class="middle_section">
+			<img class="dino_grid" src="/resources/images/central.png">
+			<div class="about-text">
+				<p>
+					{{ entry.body }}
+				<p>
+			</div>
+		</section>
+
+	    <section class="gallery">
+			{% include "_gallery" %}
+		</section>
+		<section class="footer">
+
+			<img class="triangles" src="/resources/images/bottom_accent_triangles.png">
+			<img class="barking_fish" src="/resources/images/barking_fish.png">
+			<img class="footer_wave" src="/resources/images/footer_wave.png">
+
+		{% for block in entry.footerInfo %}
+			{% if block.type == "footerInfo" %}
+			<div class="footer-content">
+				<div class="footer_about">
+					<p class="about_label">About</p>
+					<p class="footer_bio">{{ block.footerBio }}</p>
+				</div>
+				<div class="footer_contact ">
+					<p class="contact_label">Contact</p>
+					<p class="footer_email">{{ block.email }}</p>
+					
+				</div>
+				<div class="footer_available_head ">
+					<p class="available_label">Job</p>
+					<p class="footer_available">{{ block.openForFreelance}} </p>
+				</div>
+			</div>
+
+	        {% endif %}
+	    {% endfor %}
+		</section>
+	       
+
+	{% endfor %}
+{% endblock %}
