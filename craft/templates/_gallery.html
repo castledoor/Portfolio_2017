@@ -39,7 +39,7 @@
 
 					<div class="gallery-slider more-info-fade-in">
 
-					
+
 
 
 						{% set assets = entry.galleryImage %}
@@ -49,10 +49,11 @@
 						    {% for asset in assets %}
 
 						    {% if asset.kind == 'video' %}
-						   <!--  <video class="vid" preload="none" controls="false" loop webkit-playsinline muted>
-						    	  <source src="{{ asset.url }}" poster="{{ asset.url }}" type="video/mp4">
+						    
+						    <video class="vid" preload="none" controls="false" loop playsinline muted poster="{{ asset.url }}">
+						    	  <source src="{{ asset.url }}"  type="video/mp4">
+						    	</video>
 
-						    	</video> -->
 
 						    
 						    {% else %}
@@ -70,6 +71,7 @@
 
 						{% endif %}
 						   </div>
+						   <div class="project-deets">
 								<div class="project-info float-l">
 						        
 							        <h3 class="uppercase century-f-bold">{{ block.projectTitle }}</h3>
@@ -79,13 +81,14 @@
 						        	<p class="more-info-button anonymous-f light-grey"> More Info ¬ </p>
 						        	<p class="anonymous-f light-grey">
 						        		{% if block.websiteLink is empty %}
-						        		 <strike>Visit site ¬</strike> No Longer Live 
+						        		 No Longer Live 
 						        		{% else %}
 						        		<a href="{{ block.websiteLink }}" target="_blank"> Visit Site ¬ </a></p>
 						        		{% endif %}
 
 						        	
 						        </div>
+						     </div>
 						    {% endif %}
 						{% endfor %}
 					</div>

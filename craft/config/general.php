@@ -15,6 +15,7 @@ return array(
 	// Environment-specific variables (see https://craftcms.com/docs/multi-environment-configs#environment-specific-variables)
 	'environmentVariables' => array(
 		'baseUrl' => '//localhost:8888/',
+		// 'baseUrl' => 'brittanywinston',
 
 		'extraAllowedFileExtensions' => 'json',
 
@@ -36,6 +37,8 @@ return array(
 
 	// Dev Mode (see https://craftcms.com/support/dev-mode)
 	'devMode' => false,
+
+	'imageDriver' => 'imagick',
 
 
 

@@ -17,14 +17,7 @@ html {
 
 #main {
 	overflow-x: hidden;
-	/*position: fixed;*/
-}
 
-.slick-slider { display: table; table-layout: fixed; width: 100%; } 
-
-.slick-track img{
-/*	height: 100% !important;
-	width: 100% !important;*/
 }
 
 body {
@@ -37,6 +30,8 @@ body {
 /*	width: 150%;*/
 	overflow-x: hidden;
 }
+
+
 
 .name-plate {
 	background-image: url("../images/name_plate.png");
@@ -61,11 +56,19 @@ body {
 
 }
 
-.personality-image {
+/*.personality-image {
 	display: inline-block;
 	float: right;
 	width: 42%;
 	
+}*/
+
+.personality-image {
+    display: inline-block;
+    float: right;
+    width: 24%;
+    margin-right: -25%;
+    margin-top: -237px;
 }
 
 .personality-image img {
@@ -119,7 +122,8 @@ body {
 	letter-spacing: 2px;
 	font-size: 3.34vw;
 	text-align: center;
-	width: 100%;
+	width: 93%;
+	margin: 0 auto;
 
 }
 
@@ -279,7 +283,7 @@ img:focus {outline:0;}
 
 .light-grey {
 	color: #cb0e3d;
-	font-size: 1vw;
+	font-size: 1em;
 	opacity: .6;
 	
 }
@@ -306,7 +310,11 @@ img:focus {outline:0;}
 }
 
 a:visited{
-  color:#cb0e3d;
+  color:#cb0e3d !important;
+}
+
+a {
+	color:#cb0e3d !important;
 }
 
 .more-info {
@@ -451,7 +459,7 @@ a:visited{
 	float: right;
 	position: absolute;
 	z-index: 2;
-	margin-top: 12%;
+	margin-top: 4%;
 	right: 5.6%;
 	text-align: right;
 
@@ -469,7 +477,7 @@ a:visited{
 }
 
 .blurb {
-	padding-bottom: 15%;
+	padding-bottom: 6%;
 }
 
 .blurb p, .agency-info p, .dev-info p {
@@ -659,6 +667,35 @@ a:visited{
 		padding-bottom: 3%;
 		margin-left: 62%;
 	}
+
+	.first-info-block {
+	    width: 47%;
+	    position: absolute;
+	    z-index: 2;
+	    margin-top: 3%;
+	    right: 39.6%;
+	    text-align: right;
+	}
+
+	.second-info-block {
+	    width: 47%;
+	    position: absolute;
+	    z-index: 2;
+	    margin-top: 3%;
+	    right: 3.6%;
+	    text-align: right;
+	}
+
+	.third-info-block {
+		width: 47%;
+	    position: absolute;
+	    z-index: 2;
+	    margin-top: 3%;
+	    right: 15.6%;
+	    text-align: right;
+	}
+
+
 }
 
 
@@ -700,6 +737,33 @@ a:visited{
 	 	margin-left: 54%;
 	 }
 
+	 .first-info-block {
+	 	width: 42%;
+ 	    position: absolute;
+ 	    z-index: 2;
+ 	    margin-top: 3%;
+ 	    right: 42.6%;
+ 	    text-align: right;
+ }
+
+	 .second-info-block {
+	     width: 42%;
+	     position: absolute;
+	     z-index: 2;
+	     margin-top: 3%;
+	     right: 6.6%;
+	     text-align: right;
+	 }
+
+	 .third-info-block {
+	 	width: 42%;
+	     position: absolute;
+	     z-index: 2;
+	     margin-top: 3%;
+	     right: 19.6%;
+	     text-align: right;
+	 }
+
 }
 
 
@@ -731,7 +795,7 @@ a:visited{
 	}
 
 	.footer_about, .footer_contact, .footer_available_head {
-		width: 64%;
+		width: 60%;
 		position: relative;
 		z-index: 3;
 		text-align: justify;
@@ -741,6 +805,69 @@ a:visited{
 		padding-bottom: 3%;
 		margin-left: 42%;
 	}
+
+
+	.first-info-block, .second-info-block, .third-info-block {
+	    width: 63%;
+	    position: absolute;
+	    z-index: 2;
+	    margin-top: 3%;
+	    right: 25.6%;
+	    text-align: right;
+	}
+
+	
+
+	.blurb p, .agency-info p, .dev-info p {
+	    font-size: 11px;
+	}
+
+	.gallery-slider, .gallery-image {
+	 	width: 300px;
+	 }
+
+	 .gallery-hover {
+	 	width: 100%;
+	 }
+
+	 .gallery-slider {
+	 	margin: 0 auto;
+	 }
+
+	 .first {
+	 	margin-left: 0%;
+	 }
+
+	 .main-title {
+	 	font-size: 4vw;
+	 }
+
+
+	 .second {
+	 	margin-left : 0%;
+	 }
+
+	 .third {
+	 	margin-left: 0%;
+	 }
+
+	 .project-deets {
+	 	width: 300px;
+	 	margin: 0 auto;
+	 }
+
+	 .gallery-item-container {
+    	width: 100%;
+    	margin-bottom: 22%;
+	}
+
+	.light-grey {
+	    color: #cb0e3d;
+	    /*font-size: 3vw;*/
+	    opacity: .6;
+	}
+
+	
 
 	
 
@@ -782,9 +909,18 @@ a:visited{
 	}
 
 	.personality-image {
-	    display: inline-block;
+	   /* display: inline-block;
 	    float: right;
-	    width: 35%;
+	    width: 35%;*/
+	}
+
+	.personality-image {
+		display: inline-block;
+	    float: right;
+	    width: 29%;
+	    /* top: 0%; */
+	    margin-top: -42%;
+	    margin-right: -26%;
 	}
 
 	.about-text p {
@@ -815,6 +951,125 @@ a:visited{
 	body {
 	 	overflow-x: hidden;
 	 }
+
+	 .gallery {
+	     margin-top: 86%;
+	     /* margin-bottom: 24%; */
+	     margin-bottom: 12%;
+	 }
+
+	 .about-text {
+	     float: right;
+	     width: 91%;
+	     margin-top: -14%;
+	     padding-right: 4%;
+	     padding-bottom: 10%;
+	 }
+
+	 .first-info-block, .second-info-block, .third-info-block {
+	     width: 57%;
+	     position: absolute;
+	     z-index: 2;
+	     margin-top: 3%;
+	     right: 25.6%;
+	     text-align: right;
+	 }
+
+	.gallery-slider, .gallery-image {
+	 	width: 300px;
+	 }
+
+	 .gallery-hover {
+	 	width: 100%;
+	 }
+
+	 .gallery-slider {
+	 	margin: 0 auto;
+	 }
+
+	 .first {
+	 	margin-left: 0%;
+	 }
+
+	 .main-title {
+	 	font-size: 4vw;
+	 }
+
+
+	 .second {
+	 	margin-left : 0%;
+	 }
+
+	 .third {
+	 	margin-left: 0%;
+	 }
+
+	 .project-deets {
+	 	width: 300px;
+	 	margin: 0 auto;
+	 }
+
+	 .gallery-item-container {
+    	width: 100%;
+    	margin-bottom: 22%;
+	}
+
+	.light-grey {
+	    color: #cb0e3d;
+	    /*font-size: 3vw;*/
+	    opacity: .6;
+	}
+
+
+
+
+}
+
+@media all and (max-width: 570px) and (min-width: 360px) {
+	.gallery {
+	    margin-top: 86%;
+	    /* margin-bottom: 24%; */
+	    margin-bottom: 12%;
+	}
+
+	.about-text {
+	    width: 91%;
+	    margin-top: 5%;
+	    padding-right: 4%;
+	    padding-bottom: 10%;
+	}
+}
+
+@media all and (max-width: 484px) and (min-width: 372px) {
+	.gallery {
+	    margin-top: 86%;
+	    /* margin-bottom: 24%; */
+	    margin-bottom: 12%;
+	}
+
+	.about-text {
+	    width: 91%;
+	    margin-top: 5%;
+	    padding-right: 4%;
+	    padding-bottom: 10%;
+	}
+
+	.first-info-block, .second-info-block, .third-info-block {
+	    width: 57%;
+	    position: absolute;
+	    z-index: 2;
+	    margin-top: 3%;
+	    right: 25.6%;
+	    text-align: right;
+	}
+
+	.personality-image {
+		display: inline-block;
+		float: right;
+		width: 33%;
+		margin-top: -45%;
+		margin-right: -26%;
+	}
 }
 
 @media all and (max-width: 430px) and (min-width: 320px) {
@@ -864,6 +1119,91 @@ a:visited{
 	 	overflow-x: hidden;
 	 }
 
+	  .gallery {
+	     margin-top: 124%;
+	     /* margin-bottom: 24%; */
+	     margin-bottom: 12%;
+	 }
+
+	 .about-text {
+	     float: right;
+	     width: 91%;
+	     margin-top: 8%;
+	     padding-right: 4%;
+	     padding-bottom: 10%;
+	 }
+
+	 .gallery-slider, .gallery-image {
+	 	width: 300px;
+	 }
+
+	 .gallery-hover {
+	 	width: 100%;
+	 }
+
+	 .gallery-slider {
+	 	margin: 0 auto;
+	 }
+
+	 .first {
+	 	margin-left: 0%;
+	 }
+
+	 .main-title {
+	 	font-size: 4vw;
+	 }
+
+
+	 .second {
+	 	margin-left : 0%;
+	 }
+
+	 .third {
+	 	margin-left: 0%;
+	 }
+
+	 .project-deets {
+	 	width: 300px;
+	 	margin: 0 auto;
+	 }
+
+	 .gallery-item-container {
+    	width: 100%;
+    	margin-bottom: 22%;
+	}
+
+	.light-grey {
+	    color: #cb0e3d;
+	    /*font-size: 3vw;*/
+	    opacity: .6;
+	}
+
+	.first-info-block, .second-info-block, .third-info-block {
+	    width: 57%;
+	    position: absolute;
+	    z-index: 2;
+	    margin-top: 3%;
+	    right: 25.6%;
+	    text-align: right;
+	}
+
+	.personality-image img {
+	     width: 37%;
+	     float: right;
+	     /*display: none;*/
+	 }
+
+	.quote-container {
+	 	/*display: none;*/
+	 }
+
+	.personality-image {
+		display: inline-block;
+		    float: right;
+		    width: 75%;
+		    margin-top: -175px;
+		    margin-right: -26%;
+	}
 	
 }
 
@@ -885,11 +1225,11 @@ a:visited{
 		left: 9%;
 	}
 
-	.personality-image {
+	/*.personality-image {
 	    display: inline-block;
 	    float: right;
 	    width: 30%;
-	}
+	}*/
 
 	.quote-container {
 	    margin-top: -90%;
@@ -927,6 +1267,7 @@ a:visited{
 	 .personality-image img {
 	     width: 137%;
 	     float: right;
+	     /*display: none;*/
 	 }
 
 	 .footer-content {
@@ -948,6 +1289,85 @@ a:visited{
 	 body {
 	 	overflow-x: hidden;
 	 }
+
+	  .gallery {
+	     margin-top: 124%;
+	     /* margin-bottom: 24%; */
+	     margin-bottom: 12%;
+	 }
+
+	 .about-text {
+	     float: right;
+	     width: 91%;
+	     margin-top: 8%;
+	     padding-right: 4%;
+	     padding-bottom: 10%;
+	 }
+
+	
+
+	  .gallery-slider, .gallery-image {
+	 	width: 300px;
+	 }
+
+	 .gallery-hover {
+	 	width: 100%;
+	 }
+
+	 .gallery-slider {
+	 	margin: 0 auto;
+	 }
+
+	 .first {
+	 	margin-left: 0%;
+	 }
+
+	 .second {
+	 	margin-left : 0%;
+	 }
+
+	 .third {
+	 	margin-left: 0%;
+	 }
+
+	 .main-title {
+	 	font-size: 4vw;
+	 }
+
+	 .project-deets {
+	 	width: 300px;
+	 	margin: 0 auto;
+	 }
+
+	.gallery-item-container {
+    	width: 100%;
+    	margin-bottom: 18%;
+	}
+
+	.light-grey {
+	    color: #cb0e3d;
+	    /*font-size: 3vw;*/
+	    opacity: .6;
+	}
+
+	.first-info-block, .second-info-block, .third-info-block {
+	    width: 57%;
+	    position: absolute;
+	    z-index: 2;
+	    margin-top: 3%;
+	    right: 25.6%;
+	    text-align: right;
+	}
+
+	.personality-image {
+		display: inline-block;
+	    float: right;
+	    width: 25%;
+	    margin-top: -175px;
+	    margin-right: -26%;
+	}
+
+
 
 	
 

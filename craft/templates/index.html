@@ -15,17 +15,21 @@
 			</div>
 			<div class="leaf">
 				<img src="/resources/images/leaf.png">
+				
+				
 			</div>
-			<div class="personality-image">
-				<img src="/resources/images/personality_image.png">
-			</div>
-	        <div class="quote-container">
+			<div class="quote-container">
 				<div class="quote">
 					<img class="qleft" src="/resources/images/quote_left.png">
 					<p class="tag">{{ entry.tagLine }}</p>
 					<img class="qright" src="/resources/images/quote_right.png">
 				</div>
 			</div>
+			
+			<div class="personality-image">
+				<img src="/resources/images/personality_image.png">
+			</div>
+	        
 		</section>
 	<!-- 	<div class="nav">
 			<div class="arrows">
@@ -47,9 +51,9 @@
 		<section class="middle_section">
 			<img class="dino_grid" src="/resources/images/central.png">
 			<div class="about-text">
-				<p>
+				
 					{{ entry.body }}
-				<p>
+			
 			</div>
 		</section>
 
@@ -67,7 +71,9 @@
 			<div class="footer-content">
 				<div class="footer_about">
 					<p class="about_label">About</p>
-					<p class="footer_bio">{{ block.footerBio }}</p>
+					<div class="footer_bio">
+						{{ block.footerBio }}
+					</div>
 				</div>
 				<div class="footer_contact ">
 					<p class="contact_label">Contact</p>

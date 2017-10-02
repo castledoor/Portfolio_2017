@@ -1,19 +1,12 @@
 
 $( document ).ready(function() {
 
-	// $('.gallery-slider').slick({
-	//     arrows: true,
-	//     prevArrow:"<img class='prev slick-prev' src='./resources/images/arrow.png'>",
-	//     nextArrow:"<img class='next slick-next' src='./resources/images/arrow.png'>",
-	//     adaptiveHeight: true,
-	//     responsive: true,
-	//   });
+	$('.gallery-slider').slick({
+	    arrows: true,
+	    prevArrow:"<img class='prev slick-prev' src='./resources/images/arrow.png'>",
+	    nextArrow:"<img class='next slick-next' src='./resources/images/arrow.png'>",
+	  });
 
- // var mySwiper = new Swiper ('.gallery-slider', {
- //      // Optional parameters
- //      direction: 'vertical',
- //      loop: true
- //    })         
 
 
 // first letter yellow tagline
@@ -76,8 +69,8 @@ $( document ).ready(function() {
 	}
 
 	$('.more-info-button').click(function() {
-		var gallery = $(this).parent().parent().children()[1]
-		var more_info = $(this).parent().parent().children()[0]
+		var gallery = $(this).parent().parent().parent().children()[1]
+		var more_info = $(this).parent().parent().parent().children()[0];
 		$(gallery).toggleClass("more-info-fade-out more-info-fade-in");
 		$(more_info).toggleClass('more-info-fade-out-words more-info-fade-in-words');
 		var text = $(this).text();
